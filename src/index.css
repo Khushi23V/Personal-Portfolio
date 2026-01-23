@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+
+:root{
+    --bg-color:black;
+    --t1-color:white;
+    --t2-color:#E90C06;
+    --t3-color:black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition:all .50s ease;
+}
+
+body{
+    background-color: var(--bg-color);
+}
