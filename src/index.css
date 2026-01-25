@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&family=Manrope:wght@200..800&display=swap');
 :root{
     --bg-color:black;
     --t1-color:white;
     --t2-color:#E90C06;
     --t3-color:black;
+    --p-font:12px;
+    --font1:'Manrope';
+    --font2:'Handjet'
 }
 
 * {
@@ -12,8 +14,47 @@
     margin: 0;
     box-sizing: border-box;
     transition:all .50s ease;
+    background-color: var(--bg-color);
+    color: var(--t1-color);
 }
 
-body{
-    background-color: var(--bg-color);
+header{
+    font-family:var(--font1);
+}
+
+.navbar{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:35px 300px;
+    font-size: var(--p-font);
+    
+}
+.navbar a {
+    text-decoration: none;
+    color: var(--t1-color);
+    font-weight: 200;
+    padding: 7px 17px;
+    border-radius: 50px;
+
+}
+
+.navbar a:hover {
+    background: var(--t2-color);
+    color: var(--t3-color);
+    font-weight: 400;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.intro{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family:var(--font2);
+}
+
+.intro h1{
+        font-weight:500;
 }
