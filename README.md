@@ -1,16 +1,32 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Personal Portfolio
 
-Currently, two official plugins are available:
+Hi, I’m Khushi 👋 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is my personal portfolio where I share what I enjoy building and learning as a developer.
 
-## React Compiler
+1. Primarily focused on frontend development - React, TypeScript, clean UI, smooth interactions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Comfortable working with backend basics (Node.js, Express, APIs) to bring ideas end-to-end
 
-## Expanding the ESLint configuration
+3. Design-aware developer - I care about layout, spacing, and why something looks the way it does
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. I like understanding things deeply, not just making them “work”
+
+5. Constantly learning, experimenting, and improving with every project
+
+This portfolio is a snapshot of my growth as a developer; more coming, always. 🚀
+
+
+## Tech Stack
+
+**Client:** React, Vite, HTML, CSS
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Color 1 | ![#FFFFFF](https://placehold.co/50x50/ffffff/ffffff) #FFFFFF |
+| Color 2 | ![#E90C06](https://placehold.co/50x50/E90C06/E90C06) #E90C06 |
+| Color 3 | ![#000000](https://placehold.co/50x50/000000/000000) #000000 |
+
