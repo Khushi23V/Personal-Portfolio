@@ -4,7 +4,9 @@
     --t1-color:white;
     --t2-color:#E90C06;
     --t3-color:black;
-    --p-font:12px;
+    --p-font:11px;
+    --h-font:80px;
+    --t-font:16px;
     --font1:'Manrope';
     --font2:'Handjet'
 }
@@ -18,6 +20,9 @@
     color: var(--t1-color);
 }
 
+
+/*HEADER*/
+
 header{
     font-family:var(--font1);
 }
@@ -27,7 +32,7 @@ header{
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    padding:35px 300px;
+    padding:35px 380px;
     font-size: var(--p-font);
     
 }
@@ -47,14 +52,136 @@ header{
     box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
+
+/*INTRODUCTION SECTION*/
+
 .intro{
+    padding:30px 300px;
     display:flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     font-family:var(--font2);
+    height:80vh;
 }
 
 .intro h1{
-        font-weight:500;
+    font-weight:500;
+    font-size: var(--h-font);
+}
+.hero-title{
+    margin-top:-100px;
+}
+.hero-title .line {
+  display: block; 
+  text-align: right;
+}
+
+.accent {
+  color: var(--t2-color);
+  display: inline;
+}
+.hey{
+    font-size: 40px;
+}
+
+.intro img{
+    width:295px;
+    height:400px;
+}
+
+.image-logo {
+  position: relative;
+  width: 320px; 
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 24px;
+  display: block;
+}
+
+.icons {
+  position: absolute;
+  bottom:0px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap:1px;
+}
+
+.icons img {
+  width: 33px;
+  height: 33px;
+  background:none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.gmail img{
+    width:33px;
+    height:28px;
+}
+
+/*ONE-LINER*/
+
+.one-liner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    padding:80px 100px;
+}
+
+.opening, .closing{
+    font-family: var(--font2);
+    color: var(--t2-color);
+    font-size: var(--h-font);
+    font-weight: 400;
+}
+
+.text{
+    font-family: var(--font1);
+    font-weight:200;
+    font-size: var(--t-font);
+}
+
+.text-break{
+        display:block;
+}
+
+/*CAROUSEL*/
+
+/*TIMELINE*/
+
+/*ABOUT*/
+
+/*PROJECTS*/
+
+/*CONTACT*/
+
+/*FOOTER*/
+
+footer{
+    background-color: var(--t2-color);
+    position:relative;
+    width:100%;
+    height:80px;
+    bottom:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px 60px 0px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+footer p{
+    background:none;
+    font-family: var(--font1);
+    color:var(--t3-color);
+    font-size: var(--t-font);
+    font-weight: 500;
 }
