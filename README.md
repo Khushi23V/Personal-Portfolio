@@ -20,7 +20,7 @@ This portfolio is a snapshot of my growth as a developer; more coming, always. ð
 
 ## Tech Stack
 
-**Client:** React, Vite, HTML, CSS
+**Client:** React.js, Vite, CSS
 
 ## Color Reference
 
