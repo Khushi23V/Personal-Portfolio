@@ -24,13 +24,12 @@ export default function MainPage() {
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=k23verma@gmail.com" className="gmail" target="_blank" rel="noreferrer">
       <img src="/gmail.png" alt="Gmail"  />
     </a>
-    <a href="https://github.com/Khushi23V" target="_blank" rel="noreferrer">
-      <img src="/github.png" alt="GitHub" />
+    <a href="https://www.producthunt.com/@khushi_v23" target="_blank" rel="noreferrer">
+      <img src="/github.png" alt="ProductHunt" />
     </a>
   </div>
 </div>
         </div>
-
         <div className="one-liner">
             <h2 className="opening">&lt;</h2>
             <h2 className="text">I’m a Computer Science student who’s slightly obsessed with making the web look and feel amazing.
@@ -48,8 +47,7 @@ export default function MainPage() {
         <div className="work">
           <h2>Stuff I've Built<span className="accent">.</span></h2>
           <div className="work-1">
-            <img className="p1-img" src="/p-1.png" alt="Image of summarAIze"
-  />
+            <img className="p1-img" src="/p-1.png" alt="Image of summarAIze"/>
             <div className="project-info">
               <div className="p-heading">
                 <h2>summarAIze</h2>
@@ -75,19 +73,39 @@ export default function MainPage() {
                 <button>REST API</button>
                 <button>Hugging Face API</button>
                 <button>Axios</button>
-                <button>Clarity</button>
+                <button>MS Clarity</button>
               </div>
-
             </div>
           </div>
           <div className="view-all">
             <Link to="/projects" className="nav-link">
-            <p>View all</p>
-            <img src="/arrow-2.png" alt="Link" className="arrow"/>
-            </Link>
+            <p>View all</p></Link>
+            <Link to="/projects" className="nav-link"><img src="/arrow-2.png" alt="Link" className="arrow-2"/></Link>
           </div>
         </div>
-        <div className="timeline curve-bottom"></div>
+        <div className="timeline">
+          <div className="left">
+            <div className="t-1">
+              <h2>Thing 1<span className="accent">.</span></h2>
+            <p>Text</p>
+            </div>
+            <div className="t-2">
+              <h2>Thing 2<span className="accent">.</span></h2>
+            <p>Text</p>
+            </div>
+          </div>
+          <img className="timeline-img" src="/Frame 2.png" alt="Timeline"/>
+          <div className="right">
+            <div className="t-3">
+              <h2>Thing 3<span className="accent">.</span></h2>
+            <p>Text</p>
+            </div>
+            <div className="t-4">
+              <h2>Thing 4<span className="accent">.</span></h2>
+            <p>Text</p>
+            </div>
+          </div>
+        </div>
         <Footer />
         </>
     );
