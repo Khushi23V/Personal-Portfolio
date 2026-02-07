@@ -15,8 +15,17 @@ export default function MainPage() {
                 <span className="line surname">VERMA</span>
             </h1>
 <div className="image-logo">
-  <img className="profile-img" src="/port-image.png" alt="Image of Khushi Verma"
+<picture>
+  <source
+    srcSet="/image-2.png"
+    media="(max-width: 768px)"
   />
+  <img
+    className="profile-img"
+    src="/port-image.png"
+    alt="Image of Khushi Verma"
+  />
+</picture>
   <div className="icons">
     <a href="https://www.linkedin.com/in/khushiverma23/" target="_blank" rel="noreferrer">
       <img src="/linkedin-logo.png" alt="LinkedIn" />
@@ -86,23 +95,23 @@ export default function MainPage() {
         <div className="timeline">
           <div className="left">
             <div className="t-1">
-              <h2>Thing 1<span className="accent">.</span></h2>
-            <p>Text</p>
+              <h2>2026<span className="accent">.</span></h2>
+            <p>Working on ML</p>
             </div>
             <div className="t-2">
-              <h2>Thing 2<span className="accent">.</span></h2>
-            <p>Text</p>
+              <h2>Early 2025<span className="accent">.</span></h2>
+            <p>Expanded frontend, swanik</p>
             </div>
           </div>
           <img className="timeline-img" src="/Frame 2.png" alt="Timeline"/>
           <div className="right">
             <div className="t-3">
-              <h2>Thing 3<span className="accent">.</span></h2>
-            <p>Text</p>
+              <h2>Late 2025<span className="accent">.</span></h2>
+            <p>Dived into backend, summaraize</p>
             </div>
             <div className="t-4">
-              <h2>Thing 4<span className="accent">.</span></h2>
-            <p>Text</p>
+              <h2>2024<span className="accent">.</span></h2>
+            <p>Gained familiarity with basic web dev tools</p>
             </div>
           </div>
         </div>
