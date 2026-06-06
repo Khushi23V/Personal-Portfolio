@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
-
-export default function Projects(){
-    return (
-        <>
-        </>
-    );
-=======
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
@@ -98,5 +88,4 @@ export default function Projects() {
       <Footer />
     </>
   );
->>>>>>> master
 }

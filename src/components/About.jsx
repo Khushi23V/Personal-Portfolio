@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
-export default function About(){
-    return (
-        <></>
-    );
-=======
 import React, { useEffect, useRef } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -147,5 +139,4 @@ export default function About() {
       <Footer />
     </>
   );
->>>>>>> master
 }
