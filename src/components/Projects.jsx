@@ -77,11 +77,10 @@ export default function Projects() {
         </div>
         <div className="projects-cta">
           <p>
-            Alongside development, I've designed all my projects myself. To check
-            them and more of my designs out, click the button below!
+            Check out my launched products on Product Hunt!
           </p>
-          <a href="https://www.figma.com/@khushiv" target="_blank" rel="noreferrer">
-            <button className="btn-1 cta-btn">Check out my designs!</button>
+          <a href="https://www.figma.com/@khushiv" target="_blank" rel="noreferrer" className="cta-btn" aria-label="Product Hunt profile">
+            <img src="/product-hunt.png" alt="Product Hunt" />
           </a>
         </div>
       </div>

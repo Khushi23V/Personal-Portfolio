@@ -9,11 +9,15 @@ export default function MainPage() {
       <Header />
 
       <div className="intro">
-        <h1 className="hero-title">
+        <div className="intro-info">
+          <h1 className="hero-title">
           <span className="line hey">HEY<span className="accent">,</span></span>
           <span className="line name">I<span className="accent">'</span>M KHUSHI</span>
           <span className="line surname">VERMA</span>
         </h1>
+        <p>FRONT-END DEVELOPER <span className="accent">|</span> UI/UX DESIGNER</p>
+        </div>
+        
         <div className="image-logo">
           <picture>
             <source srcSet="/image-2.png" media="(max-width: 768px)" />
@@ -23,11 +27,11 @@ export default function MainPage() {
             <a href="https://www.linkedin.com/in/khushiverma23/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
               <img src="/linkedin-logo.png" alt="LinkedIn" />
             </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=k23verma@gmail.com" className="gmail" target="_blank" rel="noreferrer" aria-label="Send email">
-              <img src="/gmail.png" alt="Gmail" />
+            <a href="https://www.figma.com/@khushiv" className="figma" target="_blank" rel="noreferrer" aria-label="Figma profile">
+              <img src="/figma.png" alt="Figma" />
             </a>
-            <a href="https://www.producthunt.com/@khushi_v23" target="_blank" rel="noreferrer" aria-label="ProductHunt profile">
-              <img src="/github.png" alt="ProductHunt" />
+            <a href="https://github.com/Khushi23V" target="_blank" rel="noreferrer" aria-label="GitHub profile">
+              <img src="/github.png" alt="GitHub" />
             </a>
           </div>
         </div>
@@ -37,7 +41,7 @@ export default function MainPage() {
         <h2 className="opening">&lt;</h2>
         <h2 className="text">
           I'm a Computer Science student who's slightly obsessed with making the web look and feel amazing.
-          <span className="text-break"> Click here to download my resume!</span>
+          <span className="text-break"> Click here to get access to my resume!</span>
         </h2>
         <h2 className="closing">/&gt;</h2>
       </div>

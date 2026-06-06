@@ -40,7 +40,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Fullscreen creative mobile overlay */}
       <div className={`mobile-overlay${menuOpen ? " mobile-overlay--open" : ""}`} aria-hidden={!menuOpen}>
         <div className="mobile-overlay__bg"></div>
         <nav className="mobile-overlay__nav" aria-label="Mobile navigation">
