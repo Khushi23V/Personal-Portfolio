@@ -11,28 +11,23 @@ export default function Experience() {
           Experience<span className="accent">.</span>
         </h1>
 
-        {/* Outer row: spine | C */}
         <div className="timeline-exp">
 
-          {/* Spine */}
+
           <img className="exp-spine" src="/Frame 3.png" alt="Timeline" />
 
-          {/* C: left + right stacked vertically */}
           <div className="exp-cards">
             <div className="exp-card">
               <h2 className="exp-year">April 2026 – June 2026<span className="accent">.</span></h2>
               <p className="exp-role">UI/UX Designer & Frontend Developer (Freelance)</p>
               <p className="exp-company">AJ’s Foundation</p>
               <ul className="exp-bullets">
-                <li>Designed and developed the organization’s official responsive website from concept to deployment, using Figma
-for high-fidelity wireframes and prototyping</li>
-                <li>Spearheaded user onboarding design, optimizing the user journey to drive adoption to 50+ active users within 3
-days of product launch</li>
-                <li>Built a reusable React component library and design system, cutting future iteration cycles by 50% and ensuring
-strict visual consistency</li>
+                <li>Designed the organisation's website from scratch in Figma, defining visual identity, colour tokens, type system, component library, and responsive layouts across desktop and mobile before opening VS Code.</li>
+                <li>Built and deployed a multi-page React site to Vercel, responsive across all breakpoints, with smooth animations and transitions that matched the design intent exactly.</li>
+                <li>Optimised images for faster load times and integrated Microsoft Clarity to track real user behaviour post-launch. 50+ live users within 3 days of launch.</li>
               </ul>
               <div className="exp-tags">
-                {["MongoDB", "Express.js", "React", "Node.js", "Socket.io", "Redis", "Razorpay"].map(t => (
+                {["React", "CSS", "Figma", "Git", "Vercel", "Microsoft Clarity", "Design Research"].map(t => (
                   <span key={t} className="exp-tag">{t}</span>
                 ))}
               </div>
@@ -43,19 +38,13 @@ strict visual consistency</li>
               <p className="exp-role">MERN Stack Developer & UI/UX Intern</p>
               <p className="exp-company">Particle14 Infotech Pvt. Ltd.</p>
               <ul className="exp-bullets">
-                <li>Improved design consistency across a 15+ screen mobile product by creating a full design system in Figma,
-defining colour tokens, typography scale, gradient rules, and component variants for two distinct user flows (User
-and Buddy), reducing design decision time during implementation.</li>
-                <li>Reduced session security risk by implementing a Redis-backed OTP Safe-Meet protocol with 10-minute TTL and a
-5-state booking lifecycle with Nodemailer confirmation emails at each transition, handling real concurrent users in
-production.</li>
-                <li>Built a 3-role (Client / Companion / Admin) access-control system using stateless JWT auth and bcrypt hashing,
-eliminating server-side session storage entirely.</li>
-                <li>Engineered a dual-channel real-time messaging system with Socket.io - booking-scoped and direct pre-booking,
-persisted to PostgreSQL so chat history survives reconnects across all sessions.</li>
+                <li>Designed the complete Buddy4day mobile app in Figma — full design system with colour tokens, type scale, gradient rules, and 5+ component variants before a single screen was coded.</li>
+                <li>Mapped end-to-end flows for two separate user personas (User and Buddy) across 15+ screens: onboarding, discovery, booking lifecycle, payment, ID verification, chat, and post-session rating.</li>
+                <li>Shipped JWT-based 3-role auth, real-time Socket.io dual-channel messaging (persisted to PostgreSQL), and a Razorpay escrow flow with HMAC-SHA256 verification all in production, all on a live user base.</li>
+                <li>Built a Redis-backed OTP Safe-Meet system with 10-minute TTL and a 5-state booking lifecycle with automated Nodemailer emails at every transition. Real-time GPS geofencing enforced a 500 m session boundary using the Haversine formula.</li>
               </ul>
               <div className="exp-tags">
-                {["MongoDB", "Express.js", "React", "Node.js", "Socket.io", "Redis", "Razorpay"].map(t => (
+                {["TypeScript", "Express.js", "React", "Node.js", "PostgreSQL", "Socket.io", "Redis", "Razorpay", "Figma", "UI/UX Design", "Design Research"].map(t => (
                   <span key={t} className="exp-tag">{t}</span>
                 ))}
               </div>

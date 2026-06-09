@@ -139,7 +139,7 @@ export default function MainPage() {
       <div className="one-liner">
         <h2 className="opening">&lt;</h2>
         <h2 className="text">
-          I'm a Computer Science student who's slightly obsessed with making the web look and feel amazing. Click here to get access to my resume!
+          I design things in Figma, break them in VS Code, and somehow end up with something people actually want to use. Click here to get access to my resume!
         </h2>
         <h2 className="closing">/&gt;</h2>
       </div>
@@ -186,7 +186,7 @@ export default function MainPage() {
               </div>
             </div>
             <p className="p-desc">
-              Full-stack AI summarization tool supporting 4 tones via Hugging Face's BART-large-cnn model. Achieved 81.29% average scroll depth and 0 rage clicks across 36 sessions.
+              Designed and built a full-stack AI summary tool with 4 summary tones, 200+ users, 81.29% avg scroll depth, 0 rage clicks, and 30% traffic growth in week one. Turns walls of text into something humans actually understand.
             </p>
             <div className="p-tech">
               <button>React.js</button>
@@ -197,6 +197,8 @@ export default function MainPage() {
               <button>REST API</button>
               <button>Hugging Face API</button>
               <button>MS Clarity</button>
+              <button>Figma</button>
+              <button>UI/UX Design</button>
             </div>
           </div>
         </div>
@@ -211,23 +213,23 @@ export default function MainPage() {
       <div className="timeline">
         <div className="left">
           <div className="t-1">
-            <h2>2026<span className="accent">.</span></h2>
-            <p>Working on ML</p>
+            <h2>Mid 2026<span className="accent">.</span></h2>
+            <p>Teaching machines to feel. Multimodal ML research. Gained 3+ months of professional experience.</p>
           </div>
           <div className="t-2">
-            <h2>Early 2025<span className="accent">.</span></h2>
-            <p>Expanded frontend, swanik</p>
+            <h2>2025<span className="accent">.</span></h2>
+            <p>Found my design voice. SwaNik. Figma before code, always.</p>
           </div>
         </div>
         <img className="timeline-img" src="/Frame 2.png" alt="Timeline" />
         <div className="right">
           <div className="t-3">
-            <h2>Late 2025<span className="accent">.</span></h2>
-            <p>Dived into backend, summaraize</p>
+            <h2>Early 2026<span className="accent">.</span></h2>
+            <p>Went full-stack. Built summarAIze, shipped escrow flows, real users, real data.</p>
           </div>
           <div className="t-4">
             <h2>2024<span className="accent">.</span></h2>
-            <p>Gained familiarity with basic web dev tools</p>
+            <p>First div. First bug. Fell in love with the thrill of tech.</p>
           </div>
         </div>
       </div>
