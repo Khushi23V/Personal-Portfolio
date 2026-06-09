@@ -86,29 +86,54 @@ const projects = [
   },
 ];
 
+function DevLinks() {
+  return (
+    <div className="cta-btn-group">
+      <a href="https://www.github.com/Khushi23V" target="_blank" rel="noreferrer" className="cta-btn" aria-label="GitHub profile">
+        <img src="/github.png" alt="GitHub" />
+      </a>
+      <a href="https://www.producthunt.com/" target="_blank" rel="noreferrer" className="cta-btn" aria-label="Product Hunt profile">
+        <img src="/product-hunt.png" alt="Product Hunt" />
+      </a>
+    </div>
+  );
+}
+
+function DesignLinks() {
+  return (
+    <div className="cta-btn-group">
+      <a href="https://www.figma.com/@khushiv" target="_blank" rel="noreferrer" className="cta-btn" aria-label="Figma profile">
+        <img src="/figma.png" alt="Figma" />
+      </a>
+      <a href="https://www.behance.net/" target="_blank" rel="noreferrer" className="cta-btn" aria-label="Behance profile">
+        <img src="/behance.png" alt="Behance" />
+      </a>
+    </div>
+  );
+}
+
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("developer");
 
   const filtered = projects.filter((p) => p.type === activeFilter);
 
   return (
-    <>
+    <div>
       <Header />
       <div className="projects-page">
         <h1 className="page-title">
           Projects<span className="accent">.</span>
         </h1>
 
-        {/* Filter toggle */}
         <div className="projects-filter">
           <button
-            className={`filter-btn${activeFilter === "developer" ? " filter-btn--active" : ""}`}
+            className={"filter-btn" + (activeFilter === "developer" ? " filter-btn--active" : "")}
             onClick={() => setActiveFilter("developer")}
           >
             Developer
           </button>
           <button
-            className={`filter-btn${activeFilter === "designer" ? " filter-btn--active" : ""}`}
+            className={"filter-btn" + (activeFilter === "designer" ? " filter-btn--active" : "")}
             onClick={() => setActiveFilter("designer")}
           >
             Designer
@@ -155,24 +180,14 @@ export default function Projects() {
         <div className="projects-cta">
           <p>
             {activeFilter === "developer"
-              ? "View my developer work on GitHub!"
-              : "View my design work on Figma!"}
+              ? "View my developer work on GitHub and Product Hunt!"
+              : "View my design work on Figma and Behance!"}
           </p>
-          <a
-            href={activeFilter === "developer" ? "https://www.github.com/Khushi23V" : "https://www.figma.com/@khushiv"}
-            target="_blank"
-            rel="noreferrer"
-            className="cta-btn"
-            aria-label={activeFilter === "developer" ? "GitHub profile" : "Figma profile"}
-          >
-            <img
-              src={activeFilter === "developer" ? "/github.png" : "/figma.png"}
-              alt={activeFilter === "developer" ? "GitHub" : "Figma"}
-            />
-          </a>
+          {activeFilter === "developer" ? <DevLinks /> : <DesignLinks />}
         </div>
+
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
