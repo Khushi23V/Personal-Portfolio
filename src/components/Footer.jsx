@@ -82,7 +82,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <span className="footer-copy">
-          Designed &amp; developed by <span className="accent">Khushi Verma</span> — 2025
+          Designed &amp; developed by <span className="accent">Khushi Verma</span> — 2026
         </span>
         {count !== null && (
           <span className="footer-visitor-count" aria-label={`${count} visitors`}>
