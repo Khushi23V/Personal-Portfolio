@@ -1,11 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { createPortal } from "react-dom";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { DrawerContext } from "../App";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
+  const { openAbout } = useContext(DrawerContext);
+  const navigate = useNavigate();
+
+  // Detect desktop (>768px) — checked at click time so SSR-safe
+  const isDesktop = () => window.innerWidth > 768;
+
+  const handleAboutClick = (e) => {
+    if (isDesktop()) {
+      e.preventDefault();
+      closeMenu();
+      openAbout();
+    } else {
+      closeMenu();
+      navigate("/about");
+    }
+  };
 
   const navItems = [
     { to: "/", label: "Home", num: "01" },
@@ -15,8 +32,6 @@ export default function Header() {
     { to: "/contact", label: "Contact", num: "05" },
   ];
 
-  // Render overlay via portal directly into document.body
-  // so it escapes the sticky header's stacking context
   const overlay = createPortal(
     <div
       className={`mobile-overlay${menuOpen ? " mobile-overlay--open" : ""}`}
@@ -24,7 +39,6 @@ export default function Header() {
     >
       <div className="mobile-overlay__bg" />
 
-      {/* Close button inside the overlay so it's always visible */}
       <button
         className="mobile-overlay__close"
         onClick={closeMenu}
@@ -36,17 +50,31 @@ export default function Header() {
 
       <nav className="mobile-overlay__nav" aria-label="Mobile navigation">
         {navItems.map((item, i) => (
-          <Link
-            key={item.to}
-            to={item.to}
-            className="mobile-nav-item"
-            onClick={closeMenu}
-            style={{ "--i": i }}
-          >
-            <span className="mobile-nav-num">{item.num}</span>
-            <span className="mobile-nav-label">{item.label}</span>
-            <span className="mobile-nav-arrow">→</span>
-          </Link>
+          item.to === "/about" ? (
+            <a
+              key={item.to}
+              href="/about"
+              className="mobile-nav-item"
+              onClick={handleAboutClick}
+              style={{ "--i": i }}
+            >
+              <span className="mobile-nav-num">{item.num}</span>
+              <span className="mobile-nav-label">{item.label}</span>
+              <span className="mobile-nav-arrow">→</span>
+            </a>
+          ) : (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="mobile-nav-item"
+              onClick={closeMenu}
+              style={{ "--i": i }}
+            >
+              <span className="mobile-nav-num">{item.num}</span>
+              <span className="mobile-nav-label">{item.label}</span>
+              <span className="mobile-nav-arrow">→</span>
+            </Link>
+          )
         ))}
       </nav>
       <div className="mobile-overlay__footer">
@@ -69,9 +97,20 @@ export default function Header() {
           </div>
 
           <nav className="nav-links" aria-label="Main navigation">
-            {navItems.map((item) => (
-              <Link key={item.to} to={item.to} className="nav-link">{item.label}</Link>
-            ))}
+            {navItems.map((item) =>
+              item.to === "/about" ? (
+                <a
+                  key={item.to}
+                  href="/about"
+                  className="nav-link"
+                  onClick={handleAboutClick}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link key={item.to} to={item.to} className="nav-link">{item.label}</Link>
+              )
+            )}
           </nav>
 
           <button

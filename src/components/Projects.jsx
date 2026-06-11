@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     type: "developer",
     name: "SwaNik",
-    img: "/1. Main Page.png",
+    img: "/swanik.png",
     github: "https://github.com/Khushi23V/SwaNik",
     live: "https://swanik.netlify.app/",
     tagline: "A civic-tech app that turned stray dog reports into real-world action. 93.3% scroll depth, 3.98 pages/session, 45.72% return visitors. Built with heart, Firebase, and a lot of Figma.",
@@ -26,11 +26,11 @@ const projects = [
   {
     id: 3,
     type: "developer",
-    name: "Emotion Model",
+    name: "Emotion-Aware Captioning Model",
     img: null,
-    github:null,
+    github: null,
     live: null,
-    tagline: "Multimodal emotion recognition on MELD — 67.51% accuracy, beat 7 published baselines including DialogueRNN and UniMSE. Submitted to Springer MTAP. Presented at ICET-AICS 2026. The research paper that started as a final-year project and became something worth publishing.",
+    tagline: "Multimodal emotion recognition and captioning on MELD — 67.51% accuracy, beat 7 published baselines including DialogueRNN and UniMSE. Submitted to Springer MTAP. Presented at ICET-AICS 2026. The research paper that started as a final-year project and became something worth publishing.",
     tech: ["PYTHON", "PYTORCH", "AI", "HUGGING FACE API", "ROBERTA", "WAVLM", "LORA"],
   },
   {
@@ -38,7 +38,7 @@ const projects = [
     type: "designer",
     name: "summarAIze",
     img: "/Frame 5.png",
-    behance: "https://www.behance.net/",
+    behance: "https://www.behance.net/gallery/250870007/summarAIze-AI-Summarization-Web-App-Case-Study",
     live: "https://summaraize-ai.in/",
     tagline: "Designed the entire UI system before a line of code existed; component library, user flows, two app states (pre and post-summary). Then tracked 200+ real users with Clarity post-launch. 0 rage clicks. Design decisions validated.",
     tech: ["FIGMA", "UI", "DESIGN SYSTEM", "USER RESEARCH", "WIREFRAMING"],
@@ -47,8 +47,8 @@ const projects = [
     id: 5,
     type: "designer",
     name: "SwaNik",
-    img: "/1. Main Page.png",
-    behance: "https://www.behance.net/",
+    img: "/swanik.png",
+    behance: "https://www.behance.net/gallery/250742261/SwaNik-A-Stray-Dog-Finder-App",
     live: "https://swanik.netlify.app/",
     tagline: "Full product design for a civic stray-dog reporting app, from low-fidelity wireframes to a warm, high-contrast visual system built for accessibility. Every screen designed before a single component was coded.",
     tech: ["FIGMA", "UI DESIGN", "WIREFRAMING", "PROTOTYPING", "ACCESSIBILITY"],
@@ -58,7 +58,7 @@ const projects = [
     type: "designer",
     name: "Weave",
     img: "/weave.png",
-    figma: "https://www.figma.com/@khushiv",
+    figma: "https://www.figma.com/community/file/1645041480133748404/development-agency-website-design-weave",
     tagline: "Marketing website landing page design for a UX-led web agency. Desktop and mobile breakpoints fully documented in Figma, responsive nav overlay, CTA hierarchy designed for conversion.",
     tech: ["FIGMA", "UI DESIGN", "WIREFRAMING", "BREAKPOINT DESIGN", "RESPONSIVE DESIGN"],
   },
@@ -67,26 +67,24 @@ const projects = [
     type: "designer",
     name: "AeroFix",
     img: "/Framex.png",
-    figma: "https://www.figma.com/@khushiv",
+    figma: "https://www.figma.com/community/file/1645040417836073645/ac-services-aerofix-hero-section",
     tagline: "A clean, conversion-focused landing page design for an AC installation service. Hero section, trust signals, dual CTAs, and a fully responsive mobile layout. Designed to make a service business look credible in under 3 seconds.",
-    tech: ["FIGMA","UI DESIGN","RESPONSIVE DESIGN","WIREFRAMING","CTA DESIGN"],
+    tech: ["FIGMA", "UI DESIGN", "RESPONSIVE DESIGN", "WIREFRAMING", "CTA DESIGN"],
   },
   {
     id: 8,
     type: "designer",
     name: "Diet & Co.",
     img: "/dietco.png",
-    figma: "https://www.figma.com/@khushiv",
+    figma: "https://www.figma.com/community/file/1603345172730176254/diet-co",
     tagline: "Mobile-native food delivery app design. Splash screen, offer carousel, category browsing, geo-tagged restaurant cards, and bottom navigation. Built to iOS HIG standards with touch-target-conscious spacing throughout.",
     tech: ["FIGMA", "MOBILE UI", "iOS HIG", "INTERACTION DESIGN"],
   },
 ];
 
-
 const PixelDiamondIcon = () => (
   <img src="/Dev.png" alt="Developer view" width="18" height="18" />
 );
-
 
 const PixelPencilIcon = () => (
   <img src="/Des.png" alt="Designer view" width="18" height="18" />
@@ -98,20 +96,17 @@ const GitHubIcon = () => (
   </svg>
 );
 
-
 const FigmaIcon = () => (
   <svg width="14" height="20" viewBox="0 0 10 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fillRule="evenodd" clipRule="evenodd" d="M5 7.5C5 6.837 5.263 6.201 5.732 5.732C6.201 5.263 6.837 5 7.5 5C8.163 5 8.799 5.263 9.268 5.732C9.737 6.201 10 6.837 10 7.5C10 8.163 9.737 8.799 9.268 9.268C8.799 9.737 8.163 10 7.5 10C6.837 10 6.201 9.737 5.732 9.268C5.263 8.799 5 8.163 5 7.5ZM0 12.5C0 11.837 0.263 11.201 0.732 10.732C1.201 10.263 1.837 10 2.5 10H5V12.5C5 13.163 4.737 13.799 4.268 14.268C3.799 14.737 3.163 15 2.5 15C1.837 15 1.201 14.737 0.732 14.268C0.263 13.799 0 13.163 0 12.5ZM5 0V5H7.5C8.163 5 8.799 4.737 9.268 4.268C9.737 3.799 10 3.163 10 2.5C10 1.837 9.737 1.201 9.268 0.732C8.799 0.263 8.163 0 7.5 0H5ZM0 2.5C0 3.163 0.263 3.799 0.732 4.268C1.201 4.737 1.837 5 2.5 5H5V0H2.5C1.837 0 1.201 0.263 0.732 0.732C0.263 1.201 0 1.837 0 2.5ZM0 7.5C0 8.163 0.263 8.799 0.732 9.268C1.201 9.737 1.837 10 2.5 10H5V5H2.5C1.837 5 1.201 5.263 0.732 5.732C0.263 6.201 0 6.837 0 7.5Z"/>
   </svg>
 );
 
-
 const BehanceIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
     <path d="M7.799 5.698c.589 0 1.12.051 1.606.156.482.105.895.273 1.235.509.336.232.599.544.785.921.182.381.274.848.274 1.392 0 .596-.131 1.086-.395 1.479-.263.391-.659.714-1.176.963.704.201 1.23.557 1.574 1.063.346.508.518 1.112.518 1.818 0 .605-.12 1.125-.355 1.559-.24.435-.565.785-.974 1.049-.407.262-.876.451-1.399.562-.525.111-1.056.167-1.596.167H1V5.698h6.799zm-.339 4.872c.462 0 .839-.107 1.128-.327.287-.218.43-.561.43-1.019 0-.265-.048-.481-.144-.65a1.047 1.047 0 00-.386-.401 1.634 1.634 0 00-.57-.207 3.53 3.53 0 00-.685-.063H3.5v2.667h3.96zm.157 5.106c.267 0 .523-.025.765-.076.243-.052.455-.136.638-.254.181-.118.326-.279.435-.48.106-.202.161-.457.161-.762 0-.601-.166-1.026-.499-1.278-.334-.249-.775-.375-1.323-.375H3.5v3.225h4.117zM16.628 16.626c.441.43.998.644 1.675.644.522 0 .974-.131 1.35-.396.374-.263.602-.544.687-.843h2.44c-.391 1.213-1.001 2.071-1.826 2.577C20.124 19.117 19.143 19.37 18 19.37c-.766 0-1.455-.125-2.072-.375a4.432 4.432 0 01-1.575-1.061 4.76 4.76 0 01-1.003-1.635 5.875 5.875 0 01-.354-2.063c0-.741.12-1.432.357-2.072a4.742 4.742 0 011.017-1.638 4.592 4.592 0 011.578-1.081c.615-.26 1.293-.389 2.035-.389.822 0 1.543.161 2.163.483.616.32 1.127.753 1.524 1.293.399.541.683 1.166.855 1.872.172.704.229 1.438.173 2.203H15.97c.025.744.22 1.429.658 1.919zm2.938-5.012c-.361-.396-.886-.592-1.574-.592-.442 0-.811.074-1.1.225a2.31 2.31 0 00-.725.565 2.04 2.04 0 00-.385.735 3.367 3.367 0 00-.126.77h4.682c-.098-.706-.41-1.307-.772-1.703zM15.098 6.185h5.407v1.468h-5.407V6.185z"/>
   </svg>
 );
-
 
 const ProductHuntIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -143,7 +138,6 @@ function ProjectLinks({ project }) {
     );
   }
 
-
   if (project.figma) {
     return (
       <div className="p-links">
@@ -172,10 +166,16 @@ function ProjectLinks({ project }) {
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("developer");
+  const [tappedCard, setTappedCard] = useState(null);
   const filtered = projects.filter((p) => p.type === activeFilter);
+
+  const handleMobileTap = (id) => {
+    setTappedCard((prev) => (prev === id ? null : id));
+  };
 
   return (
     <div>
+      
       <Header />
       <div className="projects-page">
 
@@ -199,32 +199,56 @@ export default function Projects() {
         <div className="projects-list">
           {filtered.map((p, i) => {
             const idx = String(i + 1).padStart(2, "0");
+            const isTapped = tappedCard === p.id;
             return (
-              <div key={p.id} className="project-row">
+              <div
+                key={p.id}
+                className={`project-row${isTapped ? " mobile-tapped" : ""}`}
+                onClick={() => handleMobileTap(p.id)}
+              >
                 <span className="project-row-bg-num" aria-hidden="true">{idx}</span>
                 <span className="project-row-num">{idx}</span>
+
                 <div className="project-row-body">
+                  {/* Mobile: title row with links on the right */}
                   <div className="p-heading">
                     <h2>{p.name}</h2>
-                    <ProjectLinks project={p} />
+                    {/* Links always visible on mobile, in the heading row */}
+                    <div className="p-links-mobile">
+                      <ProjectLinks project={p} />
+                    </div>
                   </div>
                   <p className="p-desc">{p.tagline}</p>
                   <div className="p-tech">
                     {p.tech.map((t) => <button key={t}>{t}</button>)}
                   </div>
                 </div>
+
+                {/* Desktop: right column with image + links below, right-aligned */}
+                <div className="project-row-right">
+                  {p.img && (
+                    <div className="project-row-img">
+                      <img
+                        src={p.img}
+                        alt={p.name}
+                        onError={(e) => {
+                          e.target.style.background = "#1a1a1a";
+                          e.target.style.opacity = "0";
+                        }}
+                      />
+                    </div>
+                  )}
+                  <div className="p-links-desktop">
+                    <ProjectLinks project={p} />
+                  </div>
+                </div>
+
+                {/* Mobile: image overlay shown on tap */}
                 {p.img && (
-  <div className="project-row-img">
-    <img
-      src={p.img}
-      alt={p.name}
-      onError={(e) => {
-        e.target.style.background = "#1a1a1a";
-        e.target.style.opacity = "0";
-      }}
-    />
-  </div>
-)}
+                  <div className="project-row-mobile-img-overlay">
+                    <img src={p.img} alt={p.name} />
+                  </div>
+                )}
               </div>
             );
           })}
