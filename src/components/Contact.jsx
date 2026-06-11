@@ -15,7 +15,7 @@ export default function Contact() {
           Want to work together, collaborate, or just say hi? I'm always open to new opportunities!
         </p>
         <a
-          href="https://calendly.com/"
+          href="https://calendly.com/k23verma/30min"
           target="_blank"
           rel="noreferrer"
           className="schedule-btn"
@@ -26,7 +26,7 @@ export default function Contact() {
         <p className="contact-or">or</p>
         <div className="contact-socials">
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=k23verma@gmail.com"
+            href="mailto:k23verma@gmail.com"
             target="_blank"
             rel="noreferrer"
             aria-label="Send email"
