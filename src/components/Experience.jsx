@@ -13,7 +13,7 @@ const experiences = [
       "Built and deployed a multi-page React site to Vercel, responsive across all breakpoints, with smooth animations and transitions that matched the design intent exactly.",
       "Optimised images for faster load times and integrated Microsoft Clarity to track real user behaviour post-launch. 50+ live users within 3 days of launch.",
     ],
-    tags: ["React", "CSS", "Figma", "Git", "Vercel", "Microsoft Clarity", "Design Research"],
+    tags: ["REACT", "CSS", "FIGMA", "GIT", "VERCEL", "MICROSOFT CLARITY", "DESIGN RESEARCH"],
   },
   {
     id: 1,
@@ -26,7 +26,7 @@ const experiences = [
       "Shipped JWT-based 3-role auth, real-time Socket.io dual-channel messaging persisted to PostgreSQL, and a Razorpay escrow flow with HMAC-SHA256 verification — all in production.",
       "Built a Redis-backed OTP Safe-Meet system with 10-minute TTL and real-time GPS geofencing enforcing a 500m session boundary using the Haversine formula.",
     ],
-    tags: ["TypeScript", "Express.js", "React", "Node.js", "PostgreSQL", "Socket.io", "Redis", "Razorpay", "Figma", "UI/UX Design", "Design Research"],
+    tags: ["TYPESCRIPT", "EXPRESS.JS", "REACT", "NODE.JS", "POSTGRESQL", "SOCKET.IO", "REDIS", "RAZORPAY", "FIGMA", "UI/UX DESIGN", "DESIGN RESEARCH"],
   },
 ];
 
