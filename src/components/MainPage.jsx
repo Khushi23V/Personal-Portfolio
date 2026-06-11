@@ -152,7 +152,7 @@ export default function MainPage() {
     </div>
     <div className="code-line">
       <span className="line-num">2</span>
-      <span className="line-content">with something people actually want to use!</span>
+      <span className="line-content">with something people actually want to use! (p.s go through my portfolio on your laptop for the best experience)</span>
     </div>
     
       <a href="/about"
