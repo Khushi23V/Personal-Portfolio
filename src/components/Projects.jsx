@@ -270,7 +270,7 @@ export default function Projects() {
                 <a href="https://www.github.com/Khushi23V" target="_blank" rel="noreferrer" className="cta-btn" aria-label="GitHub profile">
                   <GitHubIcon />
                 </a>
-                <a href="https://www.producthunt.com/" target="_blank" rel="noreferrer" className="cta-btn" aria-label="Product Hunt profile">
+                <a href="https://www.producthunt.com/@khushi_v23" target="_blank" rel="noreferrer" className="cta-btn" aria-label="Product Hunt profile">
                   <ProductHuntIcon />
                 </a>
               </>
@@ -279,7 +279,7 @@ export default function Projects() {
                 <a href="https://www.figma.com/@khushiv" target="_blank" rel="noreferrer" className="cta-btn" aria-label="Figma profile">
                   <FigmaIcon />
                 </a>
-                <a href="https://www.behance.net/" target="_blank" rel="noreferrer" className="cta-btn" aria-label="Behance profile">
+                <a href="https://www.behance.net/khushiverma59" target="_blank" rel="noreferrer" className="cta-btn" aria-label="Behance profile">
                   <BehanceIcon />
                 </a>
               </>

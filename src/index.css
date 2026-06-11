@@ -419,37 +419,7 @@ header {
 
 /* ONE-LINER */
 
-.one-liner {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  flex-direction: row;
-  margin: 100px 100px;
-  padding:30px 0px;
-  gap: 20px;
-}
 
-.opening,
-.closing {
-  font-family: var(--font2);
-  color: var(--t2-color);
-  font-size: var(--h-font);
-  font-weight: 400;
-  flex-shrink: 0;
-  background: transparent;
-}
-
-.text {
-  font-family: var(--font1);
-  font-weight: 200;
-  font-size: var(--t-font);
-  background: transparent;
-}
-
-.text-break {
-  display: block;
-}
 
 /* QUICK LINKS */
 
@@ -2200,57 +2170,6 @@ footer {
   }
 }
 
-/* ONE-LINER CARD */
-
-.one-liner-card {
-  margin: 100px 100px;
-  display: flex;
-  justify-content: center;
-}
-
-.olc-editor {
-  max-width: 900px;
-  width: 100%;
-}
-
-.olc-resume-link {
-  color: var(--t1-color);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-family: 'Fira Code', Courier, monospace;
-}
-
-.olc-resume-link:hover {
-  color: var(--t2-color);
-}
-
-.olc-know-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 22px;
-  background-color: var(--t2-color);
-  color: var(--t1-color);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 9px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.olc-know-more:hover {
-  transform: scale(1.04);
-  opacity: 0.9;
-  color: var(--t1-color);
-}
-
-.olc-arrow-icon {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
 
 /* WORK SECTION */
 
@@ -2284,7 +2203,6 @@ footer {
   filter: blur(3px);
 }
 
-/* always show the right column image + links in this card */
 .work-proj-row .project-row-right {
   opacity: 1 !important;
   transform: translateY(0) !important;
@@ -2344,14 +2262,11 @@ footer {
 }
 
 @media (max-width: 1200px) {
-  .one-liner-card { margin: 60px 60px; }
   .work-section { padding: 0 80px; margin: 60px 0; }
 }
 
 @media (max-width: 768px) {
-  .one-liner-card { margin: 40px 20px; }
   .work-section { padding: 0 20px; margin: 50px 0; }
-  /* disable hover blur on mobile — no hover on touch */
   .work-scroll-stage:hover .work-project-card { filter: none; }
   .work-scroll-stage:hover .work-overlay { opacity: 0; pointer-events: none; }
 }
@@ -2413,4 +2328,8 @@ footer {
 }
 .reveal--right.reveal--visible {
   transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; transform: none; opacity: 1; }
 }

@@ -144,33 +144,7 @@ export default function MainPage() {
         </div>
       </div>
 
-      <div className="one-liner-card">
-  <div className="code-editor olc-editor">
-    <div className="code-line">
-      <span className="line-num">1</span>
-      <span className="line-content">I learn things in Figma, break them in VS Code and somehow end up</span>
-    </div>
-    <div className="code-line">
-      <span className="line-num">2</span>
-      <span className="line-content">with something people actually want to use! (p.s go through my portfolio on your laptop for the best experience)</span>
-    </div>
-    
-      <a href="/about"
-  className="olc-know-more"
-  onClick={(e) => {
-    e.preventDefault();
-    if (window.innerWidth > 768) {
-      openAbout();
-    } else {
-      navigate("/about");
-    }
-  }}
->
-  <img src="/arrow-pixel.png" alt="" className="olc-arrow-icon" aria-hidden="true" />
-  Know more
-</a>
-  </div>
-</div>
+      
 
       <div className={`quick-links reveal${quickVisible ? " reveal--visible" : ""}`} ref={quickRef}>
         <h2>Quick Links<span className="accent">.</span></h2>
