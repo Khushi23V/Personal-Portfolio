@@ -1,4 +1,5 @@
 import React from "react";
+import { useReveal } from "../hooks/useReveal";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -52,9 +53,11 @@ const aboutLines = [
 ];
 
 export default function About({ standalone = true }) {
+  const [editorRef, editorVisible] = useReveal(0.05);
   const content = (
     <div className="about-page">
-      <div className="code-editor">
+      <div className={`code-editor reveal${editorVisible ? " reveal--visible" : ""}`}
+  ref={editorRef}>
         {aboutLines.map((line) => (
           <div key={line.num} className="code-line">
             <span className="line-num">{line.num}</span>

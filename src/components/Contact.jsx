@@ -1,12 +1,15 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useReveal } from "../hooks/useReveal";
 
 export default function Contact() {
+  const [contentRef, contentVisible] = useReveal();
   return (
-    <>
+    <div className="page-enter">
       <Header />
-      <div className="contact-page">
+      <div className={`contact-page reveal${contentVisible ? " reveal--visible" : ""}`}
+  ref={contentRef}>
         <h1 className="page-title">Contact<span className="accent">.</span></h1>
         <p className="contact-desc">
           Want to work together, collaborate, or just say hi? I'm always open to new opportunities!
@@ -44,6 +47,6 @@ export default function Contact() {
         <p className="contact-social-label">Message me on my socials!</p>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

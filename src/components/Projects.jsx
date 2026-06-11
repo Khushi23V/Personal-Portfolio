@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useReveal } from "../hooks/useReveal";
 
 const projects = [
   {
@@ -121,6 +122,7 @@ const ArrowIcon = () => (
 );
 
 function ProjectLinks({ project }) {
+  
   if (project.type === "developer") {
     return (
       <div className="p-links">
@@ -165,21 +167,24 @@ function ProjectLinks({ project }) {
 }
 
 export default function Projects() {
+  
   const [activeFilter, setActiveFilter] = useState("developer");
   const [tappedCard, setTappedCard] = useState(null);
   const filtered = projects.filter((p) => p.type === activeFilter);
+  const [headerRef, headerVisible] = useReveal();
 
   const handleMobileTap = (id) => {
     setTappedCard((prev) => (prev === id ? null : id));
   };
 
   return (
-    <div>
+    <div className="page-enter">
       
       <Header />
       <div className="projects-page">
 
-        <div className="projects-header">
+        <div  className={`projects-header reveal${headerVisible ? " reveal--visible" : ""}`}
+  ref={headerRef}>
           <h1 className="page-title">Projects<span className="accent">.</span></h1>
 
           <button
@@ -198,60 +203,59 @@ export default function Projects() {
 
         <div className="projects-list">
           {filtered.map((p, i) => {
-            const idx = String(i + 1).padStart(2, "0");
-            const isTapped = tappedCard === p.id;
-            return (
-              <div
-                key={p.id}
-                className={`project-row${isTapped ? " mobile-tapped" : ""}`}
-                onClick={() => handleMobileTap(p.id)}
-              >
-                <span className="project-row-bg-num" aria-hidden="true">{idx}</span>
-                <span className="project-row-num">{idx}</span>
+  const idx = String(i + 1).padStart(2, "0");
+  const isTapped = tappedCard === p.id;
+  return (
+    <div
+      key={p.id}
+      className={`project-row${isTapped ? " mobile-tapped" : ""}`}
+      style={{
+        animation: `pageEnter 0.5s cubic-bezier(0.22,1,0.36,1) ${i * 0.07}s both`
+      }}
+      onClick={() => handleMobileTap(p.id)}
+    >
+      <span className="project-row-bg-num" aria-hidden="true">{idx}</span>
+      <span className="project-row-num">{idx}</span>
 
-                <div className="project-row-body">
-                  {/* Mobile: title row with links on the right */}
-                  <div className="p-heading">
-                    <h2>{p.name}</h2>
-                    {/* Links always visible on mobile, in the heading row */}
-                    <div className="p-links-mobile">
-                      <ProjectLinks project={p} />
-                    </div>
-                  </div>
-                  <p className="p-desc">{p.tagline}</p>
-                  <div className="p-tech">
-                    {p.tech.map((t) => <button key={t}>{t}</button>)}
-                  </div>
-                </div>
+      <div className="project-row-body">
+        <div className="p-heading">
+          <h2>{p.name}</h2>
+          <div className="p-links-mobile">
+            <ProjectLinks project={p} />
+          </div>
+        </div>
+        <p className="p-desc">{p.tagline}</p>
+        <div className="p-tech">
+          {p.tech.map((t) => <button key={t}>{t}</button>)}
+        </div>
+      </div>
 
-                {/* Desktop: right column with image + links below, right-aligned */}
-                <div className="project-row-right">
-                  {p.img && (
-                    <div className="project-row-img">
-                      <img
-                        src={p.img}
-                        alt={p.name}
-                        onError={(e) => {
-                          e.target.style.background = "#1a1a1a";
-                          e.target.style.opacity = "0";
-                        }}
-                      />
-                    </div>
-                  )}
-                  <div className="p-links-desktop">
-                    <ProjectLinks project={p} />
-                  </div>
-                </div>
+      <div className="project-row-right">
+        {p.img && (
+          <div className="project-row-img">
+            <img
+              src={p.img}
+              alt={p.name}
+              onError={(e) => {
+                e.target.style.background = "#1a1a1a";
+                e.target.style.opacity = "0";
+              }}
+            />
+          </div>
+        )}
+        <div className="p-links-desktop">
+          <ProjectLinks project={p} />
+        </div>
+      </div>
 
-                {/* Mobile: image overlay shown on tap */}
-                {p.img && (
-                  <div className="project-row-mobile-img-overlay">
-                    <img src={p.img} alt={p.name} />
-                  </div>
-                )}
-              </div>
-            );
-          })}
+      {p.img && (
+        <div className="project-row-mobile-img-overlay">
+          <img src={p.img} alt={p.name} />
+        </div>
+      )}
+    </div>
+  );
+})}
         </div>
 
         <div className="projects-cta">

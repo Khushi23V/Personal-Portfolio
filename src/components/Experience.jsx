@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useReveal } from "../hooks/useReveal";
 
 const experiences = [
   {
@@ -31,7 +32,10 @@ const experiences = [
 ];
 
 export default function Experience() {
+  
   const [openCard, setOpenCard] = useState(null);
+  const [titleRef, titleVisible] = useReveal();
+const [cardsRef, cardsVisible] = useReveal();
 
   const handleToggle = (idx) => {
     setOpenCard((prev) => (prev === idx ? null : idx));
@@ -40,12 +44,13 @@ export default function Experience() {
   const gridClass = `exp-cards-grid${openCard === 0 ? " expanded-0" : openCard === 1 ? " expanded-1" : ""}`;
 
   return (
-    <>
+    <div className="page-enter">
       <Header />
       <div className="exp-page">
-        <h1 className="page-title">Experience<span className="accent">.</span></h1>
+        <h1 className={`page-title reveal${titleVisible ? " reveal--visible" : ""}`} ref={titleRef}>Experience<span className="accent">.</span></h1>
 
-        <div className="exp-cards-wrap">
+        <div className={`exp-cards-wrap reveal${cardsVisible ? " reveal--visible" : ""}`}
+  ref={cardsRef}>
           <div className={gridClass}>
             {experiences.map((exp) => {
               const isOpen = openCard === exp.id;
@@ -96,6 +101,6 @@ export default function Experience() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
