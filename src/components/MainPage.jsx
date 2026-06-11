@@ -12,7 +12,6 @@ function useTypewriter(lines, typingSpeed = 60, pauseBetween = 600) {
   const [currentChar, setCurrentChar] = useState(0);
   const [done, setDone] = useState(false);
 
-
   useEffect(() => {
     if (done) return;
     if (currentLine >= lines.length) {
@@ -31,7 +30,6 @@ function useTypewriter(lines, typingSpeed = 60, pauseBetween = 600) {
       }, typingSpeed);
       return () => clearTimeout(t);
     } else {
-  
       const t = setTimeout(() => {
         setCurrentLine((l) => l + 1);
         setCurrentChar(0);
@@ -43,7 +41,73 @@ function useTypewriter(lines, typingSpeed = 60, pauseBetween = 600) {
   return { displayed, done };
 }
 
+function useCounter(target, duration = 1800, started = false) {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!started) return;
+    let startTime = null;
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(eased * target));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [started, target, duration]);
+  return count;
+}
 
+function ImpactSection({ onKnowMore }) {
+  const [sectionRef, sectionVisible] = useReveal(0.1);
+  const [statsRef, statsVisible] = useReveal(0.15);
+
+  const stat1 = useCounter(300, 1600, statsVisible);
+  const stat2 = useCounter(4, 1400, statsVisible);
+  const stat3 = useCounter(5, 1200, statsVisible);
+
+  return (
+    <div
+      className={`impact-section reveal${sectionVisible ? " reveal--visible" : ""}`}
+      ref={sectionRef}
+    >
+      <div className="impact-left">
+        <p className="impact-tagline">
+          I learn things in Figma, break them in VS Code and somehow end up with something people actually want to use!
+        </p>
+        <p className="impact-sub">(p.s go through my portfolio on your laptop for the best experience)</p>
+        <button className="impact-know-btn" onClick={onKnowMore}>
+          Know more
+        </button>
+      </div>
+
+      <div
+        className={`impact-stats reveal${statsVisible ? " reveal--visible" : ""}`}
+        ref={statsRef}
+      >
+        <div className="impact-stat">
+          <span className="impact-stat-num">
+            {stat1}<span className="accent">+</span>
+          </span>
+          <span className="impact-stat-label">Users across all deployed websites</span>
+        </div>
+        <div className="impact-stat">
+          <span className="impact-stat-num">
+            {stat2}<span className="accent">+</span>
+          </span>
+          <span className="impact-stat-label">Deployed websites</span>
+        </div>
+        <div className="impact-stat">
+          <span className="impact-stat-num">
+            {stat3}<span className="accent">+</span>
+          </span>
+          <span className="impact-stat-label">Years of experience designing and developing</span>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function MainPage() {
   const nameLines = ["HEY,", "I'M KHUSHI", "VERMA"];
@@ -99,6 +163,14 @@ export default function MainPage() {
     );
   };
 
+  const handleKnowMore = () => {
+    if (window.innerWidth > 768) {
+      openAbout();
+    } else {
+      navigate("/about");
+    }
+  };
+
   return (
     <div className="page-enter">
       <Header />
@@ -144,7 +216,7 @@ export default function MainPage() {
         </div>
       </div>
 
-      
+      <ImpactSection onKnowMore={handleKnowMore} />
 
       <div className={`quick-links reveal${quickVisible ? " reveal--visible" : ""}`} ref={quickRef}>
         <h2>Quick Links<span className="accent">.</span></h2>

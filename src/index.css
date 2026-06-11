@@ -419,6 +419,63 @@ header {
 
 /* ONE-LINER */
 
+.impact-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding:80px 80px;
+  gap: 240px;
+  font-family: var(--font1);
+}
+
+.impact-left{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.impact-tagline{
+  font-weight:500;
+  font-size:25px;
+}
+
+.impact-sub, .impact-stat-label{
+  font-weight:200;
+  font-size:14px;
+}
+
+.impact-stats{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+}
+
+.impact-stat{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.impact-stat-num{
+  color: var(--t2-color);
+  font-family: var(--font2);
+  font-size:55px;
+  font-weight:500;
+}
+
+.impact-know-btn{
+  font-family: var(--font1);
+  font-size:14px;
+  font-weight:200;
+  width:120px;
+  height:40px;
+  border-radius:50px;
+}
+
 
 
 /* QUICK LINKS */
@@ -1665,31 +1722,35 @@ footer {
   }
 
   /* One-liner */
-  .one-liner {
-    margin: 40px 20px;
+  .impact-section{
+    flex-direction: column;
+    gap:100px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .impact-stats{
     flex-direction: row;
-    gap: 10px;
   }
 
-  .opening,
-  .closing {
-    font-size: 48px;
-  }
+  .impact-tagline{
+  font-size:20px;
+}
 
-  .text {
-    font-size: 14px;
-  }
+.impact-sub, .impact-stat-label{
+  font-size:12px;
+}
+
+.impact-stat-num{  font-size:45px;
+}
+
+
 
   /* Quick links */
   .quick-links,
-  .work {
+  .work-section {
     margin: 50px 20px;
     gap: 24px;
-  }
-
-  .quick-links h2,
-  .work h2 {
-    font-size: 32px;
   }
   .quick-links p {
   font-size:12px;
