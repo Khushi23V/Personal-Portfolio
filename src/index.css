@@ -1615,11 +1615,11 @@ footer {
   .impact-section{
     flex-direction: column;
     gap: 60px;
-    padding: 60px 30px;
+    padding: 20px 30px 60px;
   }
 
   .impact-left{
-    padding-right:150px;
+    padding-right:100px;
   }
 
   .impact-stats{
@@ -2234,9 +2234,16 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .work-section { padding: 0 20px; margin: 50px 0; }
-  .work-scroll-stage:hover .work-project-card { filter: none; }
-  .work-scroll-stage:hover .work-overlay { opacity: 0; pointer-events: none; }
+  .work-section { 
+    padding: 0 20px; margin: 50px 0; 
+  }
+
+  .work-scroll-stage:hover .work-overlay { 
+    opacity: 1;
+    pointer-events: all;
+    margin-top: 20px;
+  }
+
 }
 
 /* PAGE TRANSITIONS */
